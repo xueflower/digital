@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+	</head>
+	<body>
+		<div class="two container">
+			<div class="tab-bar">
+				<img class="logo" src="static/img/logo.png"/>
+				<ul class="tab-item">
+					<li><a href="javascript:;">二维</a></li>
+					<li><a href="javascript:;">三维</a></li>
+					<li><a href="javascript:;">视屏动画</a></li>
+					<li><a href="javascript:;">VR</a></li>
+					<li><a href="javascript:;">AR</a></li>
+					<li><a href="javascript:;">展示展陈</a></li>
+				</ul>
+			</div>
+			<div class="two swiper-cont1">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+				        <!--<div class="swiper-slide">
+				        	<a href="javascript:;">
+				        		<img src="static/img/erwei/mupic.png"/>
+				        		<img src="static/img/erwei/muintro.png"/>
+				        	</a>
+				        </div>-->
+				        <!--<div class="swiper-slide">
+				        	<a href="javascript:;">
+				        		<img src="static/img/erwei/beitie.png"/>
+				        		<img src="static/img/erwei/beitieintro.png"/>
+				        	</a>
+				        </div>
+				        <div class="swiper-slide">
+				        	<a href="javascript:;">
+				        		<img src="static/img/erwei/linepic.png"/>
+				        		<img src="static/img/erwei/lineintro.png"/>
+				        	</a>
+				        </div>
+				        <div class="swiper-slide">
+				        	<a href="javascript:;">
+				        		<img src="static/img/erwei/family.png"/>
+				        		<img src="static/img/erwei/familyintro.png"/>
+				        	</a>
+				        </div>-->
+				    </div>
+				</div>
+			</div>
+			<div class="footer">重庆声光电智联电子有限公司·数字业务部</div>
+		</div>
+	</body>
+	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var token = window.location.search.split('=')[1].toString();
+			$.ajax({
+				type:"get",
+				url:"static/common.json",
+				dataType:"json",
+				success:function(data){
+					var newData = data.twolevel;
+					console.log(newData.list[0].id)
+					for (var i=0;i<newData.list.length;i++){
+						if(newData.list[i].id==token){
+							var _ThisData = newData.list[i].data;
+							console.log(_ThisData.length)
+							var str = ''
+							for(var j=0;j<_ThisData.length;j++){
+								str+='<div class="swiper-slide">'
+							        	+'<a href="javascript:;">'
+							        		+'<img src='+_ThisData[j].showpic+'/>'
+							        		+'<img src='+_ThisData[j].intro+'/>'
+							        	+'</a>'
+							        +'</div>'
+							}
+							$('.swiper-wrapper').html(str)
+							var mySwiper = new Swiper('.swiper-container',{
+								autoplay: true,
+								loop:true,
+							})
+						}
+					}
+					
+				},
+				error:function(data){
+					console.log(data)
+				}
+			})
+		}
+		
+		
+	</script>
+</html>

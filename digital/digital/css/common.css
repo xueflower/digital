@@ -1,0 +1,141 @@
+/*
+	首页样式index.html
+	-------------------------------------
+*/
+.index .cont .swiper-wrapper{
+	width: 96rem;
+	height: 41.9rem;
+}
+.index .cont .swiper-wrapper .swiper-slide{
+	width: 100%;
+	height: 100%;
+}
+.index .cont .cont-class{
+	height: 45.5rem;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 2.7rem 5.5rem 2.5rem 6.25rem;
+	display: flex;
+	justify-content: space-around;
+}
+.index .cont-left,
+.index .cont-center,
+.index .cont-right{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.inde .cont-class img{
+	display:block;
+}
+.first{
+	width: 100%;
+	height: 100%;
+	background: url("../static/img/index/8.png");
+	background-size:100% 100%;
+}
+.sec{
+	width: 96rem;
+	height: 41.9rem;
+	background: url("../static/img/index/88.png");
+	background-size:100% 100% ;
+}
+.thd{
+	width: 96rem;
+	height: 41.9rem;
+	background: url("../static/img/index/888.png");
+	background-size:100% 100% ;
+}
+.three-d{
+	width: 30rem;
+	height: 12.5rem;
+}
+.zhanshi-zhanchen{
+	width: 30rem;
+	height: 26.9rem;
+}
+.two-d{
+	width: 22.5rem;
+	height: 31.9rem;
+}
+.index .cont-class .video{
+	width: 22.5rem;
+	height: 7.65rem;
+}
+.vr{
+	width: 30rem;
+	height: 25.1rem;
+}
+.ar{
+	width: 30rem;
+	height: 14.25rem;
+}
+
+
+/*
+	二维页面twod.html
+	---------------------------------------
+*/
+.two .swiper-cont1{
+	width: 100%;
+	height: 44.3rem;
+}
+.two .swiper-cont1 .swiper-wrapper{
+	width: 100%;
+	height: 100%;
+}
+.two .swiper-cont1 .swiper-slide{
+	width: 96rem;
+	height: 44.3rem;
+	background: url("../static/img/erji/diwen.png");
+	background-size: 100% 100%;
+}
+.two .swiper-cont1 .swiper-slide a{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+}
+.two .swiper-cont1 .swiper-slide a img{
+	display: block;
+}
+.two .swiper-cont1 .swiper-slide img:first-child{
+	width: 26.25rem;
+	height: 32rem;
+	/*background: rgba(0,0,0,0.2);*/
+}
+.two .swiper-cont1 .swiper-slide img:last-child{
+	width:16.25rem;
+	height: 2.3rem;
+}
+
+/*
+	二维图表twod_list.html
+	---------------------------------------------
+*/
+.twod-list .two-list{
+	width: 70.1rem;
+	margin: auto;
+}
+.twod-list .two-list .two-list-box{
+	width: 100%;
+	height: 15.9rem;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+.twod-list .two-list .two-list-box li{
+	width: 12.9rem;
+	height: 15.6rem;
+	box-shadow: 0.4rem 0.4rem 0 0 rgba(0,0,0,0.2);
+	border-radius: 0.2rem;
+	background: red;
+}
+
+/*
+ *  二维展示详情页面 twod_detail.html
+ * --------------------------------------------------
+*/
+
+

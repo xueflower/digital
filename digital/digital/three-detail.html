@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+	</head>
+	<body>
+		<div id="app" style="width: 100%; height: 100%;  position: absolute;">
+	        <model-obj   	
+	        	:scale = "bgScale"
+						:lights = "[
+	                    {
+	                        type: 'HemisphereLight',
+	                        position: { x: 0, y: 1, z: 0 },
+	                        skyColor: 0xaaaaff,
+	                        groundColor: 0x806060,
+	                        intensity: 0.2
+	                    },
+	                    {
+	                        //type: 'DirectionalLight',
+	                        type: 'AmbientLight',
+	                        position: { x: 1, y: 1, z: 1 },
+	                        color: 0xffffff,
+	                        intensity: 1.0
+	                    },
+	                    {
+	                        //type: 'DirectionalLight',
+	                        type: 'AmbientLight',
+	                        position: { x: 0, y: 1, z: 0 },
+	                        color: 0xffffff,
+	                        intensity: 1.0
+	                    }                    
+	                ]"
+	        	src="img/threed/75450.obj"
+	        	mtl="img/threed/75450.mtl">
+	        </model-obj>
+	        <div class="intro-cont">
+	        	
+	        </div>
+	    </div>
+	</body>
+	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue-3d-model.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new Vue({
+            el: '#app',
+			data: {
+				obj: "",
+				mtl: "",
+				bgScale: 	{ x: 0.5, y: 0.5, z: 0.5 }
+			}
+        })  
+	</script>
+</html>
